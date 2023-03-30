@@ -60,8 +60,8 @@ class InvalidCoordinatesError(Exception):
 
 
 class Game:
-    frame: list[list[Union[None, Marker]]]
-    last_placed_marker: Union[None, Marker]
+    frame: list[list[None | Marker]]
+    last_placed_marker: None | Marker
 
     def __init__(self):
         def get_empty_row():
@@ -86,9 +86,7 @@ class Game:
         return rows + columns + diagonal1 + diagonal2
 
     # None -> game not finished
-    def get_game_outcome(
-        self,
-    ) -> Union[None, Tuple[Outcome, Union[None, Marker]]]:
+    def get_game_outcome(self) -> None | Tuple[Outcome, None | Marker]:
         current_frame_lines = [
             self.frame[coordinates.x][coordinates.y]
             for coordinates in self.__get_all_lines()
@@ -96,7 +94,7 @@ class Game:
         # ^^^^^
         # Should be a list of three-length lists. It defines every line
         # (e.g. a row, a diagonal or a column) that is used to calculate the outcome.
-        # It's type should be list[list[Union[None, Marker]]]
+        # It's type should be list[list[None | Marker]]
 
         def is_winner(marker: Marker):
             for line in current_frame_lines:
