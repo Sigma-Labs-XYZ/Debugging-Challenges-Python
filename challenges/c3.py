@@ -17,6 +17,12 @@ class Coordinates:
     def __repr__(self):
         return f"({self.x}, {self.y})"
 
+    def __lt__(self, other):
+        return (self.x < other.x) and (self.y < other.y)
+
+    def __eq__(self, other):
+        return (self.x == other.x) and (self.y == other.y)
+
 
 class Marker(Enum):
     X = "X"
@@ -66,14 +72,14 @@ class Game:
         self.frame[coordinates.x][coordinates.y] = marker
         self.last_placed_marker = marker
 
-    @staticmethod
     # Returns all lines that are used to calculate the game outcome (all rows, all columns, etc)
-    def __get_all_lines() -> list[list[Coordinates]]:
-        rows = [[Coordinates(x, y) for x in range(3)] for y in range(3)]
-        columns = [[Coordinates(x, y) for y in range(3)] for x in range(3)]
+    @staticmethod
+    def get_all_lines() -> list[list[Coordinates]]:
+        rows = [[Coordinates(x, y) for y in range(3)] for x in range(3)]
+        columns = [[Coordinates(x, y) for x in range(3)] for y in range(3)]
         diagonal1 = [Coordinates(0, 0), Coordinates(1, 1), Coordinates(2, 2)]
         diagonal2 = [Coordinates(0, 2), Coordinates(1, 1), Coordinates(2, 0)]
-        return rows + columns + diagonal1 + diagonal2
+        return rows + columns + [diagonal1] + [diagonal2]
 
     # None -> game not finished
     def get_game_outcome(

@@ -43,11 +43,15 @@ class Tests(unittest.TestCase):
         ]
 
         def get_coordinates(line):
-            return [Coordinates(x, y) for x, y in line]
+            return sorted([Coordinates(x, y) for x, y in line])
 
-        assert map(get_coordinates, all_lines).sort() == [
-            line.sort() for line in Game.__get_all_lines()
-        ]
+        game = Game()
+        print(sorted([sorted(line) for line in game.get_all_lines()]))
+        print("daklsjflsakjdflksajdfklj")
+        print(sorted(list(map(get_coordinates, all_lines))))
+        assert sorted(list(map(get_coordinates, all_lines))) == sorted(
+            [sorted(line) for line in game.get_all_lines()]
+        )
 
     def test_c3_3(self):
         game = Game()
