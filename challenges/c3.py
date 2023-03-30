@@ -71,10 +71,10 @@ class Game:
         self.last_placed_marker = None
 
     def place_marker(self, coordinates: Coordinates, marker: Marker) -> None:
-        if self.last_placed_marker == marker:
-            raise WrongMoveOrderError
         self.frame[coordinates.x][coordinates.y] = marker
         self.last_placed_marker = marker
+        if self.last_placed_marker == marker:
+            raise WrongMoveOrderError
 
     # Returns all lines that are used to calculate the game outcome (all rows, all columns, etc)
     @staticmethod
