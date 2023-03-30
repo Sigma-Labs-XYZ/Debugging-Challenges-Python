@@ -79,8 +79,8 @@ class Game:
     # Returns all lines that are used to calculate the game outcome (all rows, all columns, etc)
     @staticmethod
     def get_all_lines() -> list[list[Coordinates]]:
-        rows = [[Coordinates(x, y) for y in range(3)] for x in range(3)]
-        columns = [[Coordinates(x, y) for x in range(3)] for y in range(3)]
+        rows = [Coordinates(x, y) for y in range(3) for x in range(3)]
+        columns = [Coordinates(x, y) for x in range(3) for y in range(3)]
         diagonal1 = [Coordinates(0, 0), Coordinates(1, 1), Coordinates(2, 2)]
         diagonal2 = [Coordinates(0, 2), Coordinates(1, 1), Coordinates(2, 0)]
         return rows + columns + diagonal1 + diagonal2
