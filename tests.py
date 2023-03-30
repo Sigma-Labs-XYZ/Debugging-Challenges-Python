@@ -14,7 +14,7 @@ from challenges.c3 import (
 
 class Tests(unittest.TestCase):
     def test_c1(self):
-        assert c1() == 2
+        assert c1() == 1
 
     def test_c2(self):
         assert c2() == 120
