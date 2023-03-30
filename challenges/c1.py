@@ -17,4 +17,5 @@ increment_counter()
 
 
 def c1():
+    # Should equal 1
     return count
