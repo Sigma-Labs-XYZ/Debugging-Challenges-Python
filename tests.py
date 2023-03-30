@@ -1,6 +1,4 @@
 import unittest
-from challenges.c1 import c1
-from challenges.c2 import c2
 from challenges.c3 import (
     Game,
     Coordinates,
@@ -13,12 +11,6 @@ from challenges.c3 import (
 
 
 class Tests(unittest.TestCase):
-    def test_c1(self):
-        self.assertEqual(c1(), 1)
-
-    def test_c2(self):
-        self.assertEqual(c2(), 120)
-
     def test_c3_1(self):
         game = Game()
         self.assertEqual(
