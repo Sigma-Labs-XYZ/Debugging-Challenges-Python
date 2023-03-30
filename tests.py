@@ -45,7 +45,9 @@ class Tests(unittest.TestCase):
         def get_coordinates(line):
             return [Coordinates(x, y) for x, y in line]
 
-        assert map(get_coordinates, all_lines).sort() == all_lines.sort()
+        assert map(get_coordinates, all_lines).sort() == [
+            line.sort() for line in Game.__get_all_lines()
+        ]
 
     def test_c3_3(self):
         game = Game()
