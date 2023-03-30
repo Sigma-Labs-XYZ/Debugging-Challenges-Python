@@ -92,7 +92,8 @@ class Game:
             for coordinates in self.__get_all_lines()
         ]
         # ^^^^^
-        # It's type should be list[list[None | Marker]]
+        # It's type should be list[list[None | Marker]]. Represents all lines used
+        # to calculate game outcome.
 
         def is_winner(marker: Marker):
             for line in current_frame_lines:
