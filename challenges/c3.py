@@ -6,6 +6,8 @@ from typing import Tuple, Union
 # Then get all of the tests passing
 # Don't assume anything works: use print statements and make your own mini tests
 
+# Don't change the interface. Just the implementation of the already existing methods.
+
 
 class Coordinates:
     def __init__(self, x, y):
@@ -77,14 +79,14 @@ class Game:
     def get_game_outcome(
         self,
     ) -> Union[None, Tuple[Outcome, Union[None, Marker]]]:
-        # Should be a list of three-length lists. It defines every line
-        # (e.g. a row, a diagonal or a column) that is used to calculate the outcome.
-        # It's type should be list[list[Union[None, Marker]]]
-
         current_frame_lines = [
             self.frame[coordinates.x][coordinates.y]
             for coordinates in self.__get_all_lines()
         ]
+        # ^^^^^
+        # Should be a list of three-length lists. It defines every line
+        # (e.g. a row, a diagonal or a column) that is used to calculate the outcome.
+        # It's type should be list[list[Union[None, Marker]]]
 
         def is_winner(marker: Marker):
             for line in current_frame_lines:
