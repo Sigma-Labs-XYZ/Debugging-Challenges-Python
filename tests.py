@@ -14,18 +14,21 @@ from challenges.c3 import (
 
 class Tests(unittest.TestCase):
     def test_c1(self):
-        assert c1() == 1
+        self.assertEqual(c1(), 1)
 
     def test_c2(self):
-        assert c2() == 120
+        self.assertEqual(c2(), 120)
 
     def test_c3_1(self):
         game = Game()
-        assert game.frame == [
-            [None, None, None],
-            [None, None, None],
-            [None, None, None],
-        ]
+        self.assertEqual(
+            game.frame,
+            [
+                [None, None, None],
+                [None, None, None],
+                [None, None, None],
+            ],
+        )
 
     def test_c3_2(self):
         all_lines = [
@@ -46,18 +49,22 @@ class Tests(unittest.TestCase):
             return sorted([Coordinates(x, y) for x, y in line])
 
         game = Game()
-        assert sorted(list(map(get_coordinates, all_lines))) == sorted(
-            [sorted(line) for line in game.get_all_lines()]
+        self.assertEquals(
+            sorted(list(map(get_coordinates, all_lines))),
+            sorted([sorted(line) for line in game.get_all_lines()]),
         )
 
     def test_c3_3(self):
         game = Game()
         game.place_marker(Coordinates(1, 0), Marker.O)
-        assert game.frame == [
-            [None, Marker.O, None],
-            [None, None, None],
-            [None, None, None],
-        ]
+        self.assertEquals(
+            game.frame,
+            [
+                [None, Marker.O, None],
+                [None, None, None],
+                [None, None, None],
+            ],
+        )
 
     def test_c3_4(self):
         game = Game()
@@ -77,7 +84,7 @@ class Tests(unittest.TestCase):
         game.place_marker(Coordinates(1, 0), Marker.X)
         game.place_marker(Coordinates(0, 2), Marker.O)
         game.place_marker(Coordinates(2, 0), Marker.X)
-        assert game.get_game_outcome() == (Outcome.Win, Marker.X)
+        self.assertEquals(game.get_game_outcome(), (Outcome.Win, Marker.X))
 
     def test_c3_7(self):
         game = Game()
@@ -86,7 +93,7 @@ class Tests(unittest.TestCase):
             [Marker.X, Marker.X, Marker.O],
             [Marker.X, Marker.O, Marker.X],
         ]
-        assert game.get_game_outcome() == (Outcome.Win, Marker.X)
+        self.assertEquals(game.get_game_outcome(), (Outcome.Win, Marker.X))
 
     def test_c3_8(self):
         game = Game()
@@ -95,7 +102,7 @@ class Tests(unittest.TestCase):
             [Marker.X, Marker.X, None],
             [Marker.O, Marker.O, Marker.O],
         ]
-        assert game.get_game_outcome() == (Outcome.Win, Marker.O)
+        self.assertEquals(game.get_game_outcome(), (Outcome.Win, Marker.O))
 
     def test_c3_9(self):
         game = Game()
@@ -104,7 +111,7 @@ class Tests(unittest.TestCase):
             [Marker.X, Marker.O, Marker.O],
             [Marker.X, Marker.O, Marker.X],
         ]
-        assert game.get_game_outcome() == (Outcome.Draw, None)
+        self.assertEquals(game.get_game_outcome(), (Outcome.Draw, None))
 
     def test_c3_10(self):
         game = Game()
@@ -113,7 +120,7 @@ class Tests(unittest.TestCase):
             [Marker.X, None, Marker.O],
             [Marker.X, Marker.X, Marker.O],
         ]
-        assert game.get_game_outcome() == None
+        self.assertEquals(game.get_game_outcome(), None)
 
     def test_c3_11(self):
         game = Game()
