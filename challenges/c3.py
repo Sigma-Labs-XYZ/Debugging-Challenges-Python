@@ -79,7 +79,7 @@ class Game:
         columns = [[Coordinates(x, y) for x in range(3)] for y in range(3)]
         diagonal1 = [Coordinates(0, 0), Coordinates(1, 1), Coordinates(2, 2)]
         diagonal2 = [Coordinates(0, 2), Coordinates(1, 1), Coordinates(2, 0)]
-        return rows + columns + [diagonal1] + [diagonal2]
+        return rows + columns + diagonal1 + diagonal2
 
     # None -> game not finished
     def get_game_outcome(
