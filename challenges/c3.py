@@ -4,7 +4,7 @@ from typing import Tuple, Union
 # Noughts and Crosses implementation
 # Familiarise yourself with the types and data structures that are defined
 # Then get all of the tests passing
-# Don't assume anything works: use print statements and make your own mini tests
+# Don't assume anything works: use print statements to check things work
 
 # Don't change the interface. Just the implementation of the already existing methods.
 
