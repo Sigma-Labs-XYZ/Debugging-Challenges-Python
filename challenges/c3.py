@@ -77,6 +77,10 @@ class Game:
     def get_game_outcome(
         self,
     ) -> Union[None, Tuple[Outcome, Union[None, Marker]]]:
+        # Should be a list of three-length lists. It defines every line
+        # (e.g. a row, a diagonal or a column) that is used to calculate the outcome.
+        # It's type should be list[list[Union[None, Marker]]]
+
         current_frame_lines = [
             self.frame[coordinates.x][coordinates.y]
             for coordinates in self.__get_all_lines()
