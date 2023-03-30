@@ -61,7 +61,7 @@ class InvalidCoordinatesError(Exception):
 
 class Game:
     frame: list[list[None | Marker]]
-    last_placed_marker: Union[None, Marker]
+    last_placed_marker: None | Marker
 
     def __init__(self):
         def get_empty_row():
