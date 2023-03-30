@@ -46,9 +46,6 @@ class Tests(unittest.TestCase):
             return sorted([Coordinates(x, y) for x, y in line])
 
         game = Game()
-        print(sorted([sorted(line) for line in game.get_all_lines()]))
-        print("daklsjflsakjdflksajdfklj")
-        print(sorted(list(map(get_coordinates, all_lines))))
         assert sorted(list(map(get_coordinates, all_lines))) == sorted(
             [sorted(line) for line in game.get_all_lines()]
         )
@@ -91,7 +88,7 @@ class Tests(unittest.TestCase):
         ]
         assert game.get_game_outcome() == (Outcome.Win, Marker.X)
 
-    def test_c3_7(self):
+    def test_c3_8(self):
         game = Game()
         game.frame = [
             [None, None, Marker.X],
@@ -100,16 +97,16 @@ class Tests(unittest.TestCase):
         ]
         assert game.get_game_outcome() == (Outcome.Win, Marker.O)
 
-    def test_c3_8(self):
+    def test_c3_9(self):
         game = Game()
         game.frame = [
-            [Marker.O, Marker.O, Marker.X],
+            [Marker.O, Marker.X, Marker.X],
             [Marker.X, Marker.O, Marker.O],
-            [Marker.X, Marker.X, Marker.O],
+            [Marker.X, Marker.O, Marker.X],
         ]
         assert game.get_game_outcome() == (Outcome.Draw, None)
 
-    def test_c3_9(self):
+    def test_c3_10(self):
         game = Game()
         game.frame = [
             [Marker.O, Marker.O, Marker.X],
@@ -118,15 +115,15 @@ class Tests(unittest.TestCase):
         ]
         assert game.get_game_outcome() == None
 
-    def test_c3_10(self):
+    def test_c3_11(self):
         game = Game()
         game.frame = [
-            [Marker.X, Marker.O, Marker.O],
-            [Marker.X, None, Marker.O],
-            [Marker.X, Marker.X, Marker.O],
+            [Marker.X, Marker.O, None],
+            [Marker.X, Marker.O, None],
+            [Marker.X, None, None],
         ]
         with self.assertRaises(GameAlreadyFinishedError):
-            game.place_marker(Coordinates(1, 1), Marker.O)
+            game.place_marker(Coordinates(2, 0), Marker.O)
 
 
 if __name__ == "__main__":
