@@ -9,6 +9,7 @@ from challenges.c3 import (
     Outcome,
 )
 from challenges.c4 import tower_builder
+from challenges.c5 import remove_parentheses
 
 
 class Tests(unittest.TestCase):
@@ -127,6 +128,13 @@ class Tests(unittest.TestCase):
 
     def test_c4(self):
         self.assertEqual(tower_builder(3), ["  *  ", " *** ", "*****"])
+
+    def test_c5(self):
+        self.assertEqual(
+            remove_parentheses(
+                "example(unwanted thing)example", "exampleexample"
+            )
+        )
 
 
 if __name__ == "__main__":
