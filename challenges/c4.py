@@ -1,4 +1,14 @@
 # Don't add any more statements, just change existing ones
+# Builds towers like this:
+# n_floors = 6:
+# [
+#  "     *     ",
+#  "    ***    ",
+#  "   *****   ",
+#  "  *******  ",
+#  " ********* ",
+#  "***********"
+# ]
 def tower_builder(n_floors):
     if n_floors == 0:
         return []
