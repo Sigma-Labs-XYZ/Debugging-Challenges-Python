@@ -1,5 +1,5 @@
 import unittest
-from answers.c3 import (
+from challenges.c3 import (
     Game,
     Coordinates,
     GameAlreadyFinishedError,
@@ -8,9 +8,9 @@ from answers.c3 import (
     SquareAlreadyOccupiedError,
     Outcome,
 )
-from answers.c4 import tower_builder
-from answers.c5 import remove_parentheses
-from answers.c6 import calculate_factorial
+from challenges.c4 import tower_builder
+from challenges.c5 import remove_parentheses
+from challenges.c6 import calculate_factorial
 
 
 class Tests(unittest.TestCase):
