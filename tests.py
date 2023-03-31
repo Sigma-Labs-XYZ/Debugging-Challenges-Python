@@ -1,5 +1,5 @@
 import unittest
-from challenges.c3 import (
+from answers.c3 import (
     Game,
     Coordinates,
     GameAlreadyFinishedError,
@@ -8,8 +8,9 @@ from challenges.c3 import (
     SquareAlreadyOccupiedError,
     Outcome,
 )
-from challenges.c4 import tower_builder
-from challenges.c5 import remove_parentheses
+from answers.c4 import tower_builder
+from answers.c5 import remove_parentheses
+from answers.c6 import calculate_factorial
 
 
 class Tests(unittest.TestCase):
@@ -131,10 +132,12 @@ class Tests(unittest.TestCase):
 
     def test_c5(self):
         self.assertEqual(
-            remove_parentheses(
-                "example(unwanted thing)example", "exampleexample"
-            )
+            remove_parentheses("example(unwanted thing)example"),
+            "exampleexample",
         )
+
+    def test_c6(self):
+        self.assertEqual(calculate_factorial(5), 120)
 
 
 if __name__ == "__main__":
