@@ -8,6 +8,7 @@ from challenges.c3 import (
     SquareAlreadyOccupiedError,
     Outcome,
 )
+from challenges.c4 import tower_builder
 
 
 class Tests(unittest.TestCase):
@@ -41,7 +42,7 @@ class Tests(unittest.TestCase):
             return sorted([Coordinates(x, y) for x, y in line])
 
         game = Game()
-        self.assertEquals(
+        self.assertEqual(
             sorted(list(map(get_coordinates, all_lines))),
             sorted([sorted(line) for line in game.get_all_lines()]),
         )
@@ -49,7 +50,7 @@ class Tests(unittest.TestCase):
     def test_c3_3(self):
         game = Game()
         game.place_marker(Coordinates(1, 0), Marker.O)
-        self.assertEquals(
+        self.assertEqual(
             game.frame,
             [
                 [None, Marker.O, None],
@@ -76,7 +77,7 @@ class Tests(unittest.TestCase):
         game.place_marker(Coordinates(1, 0), Marker.X)
         game.place_marker(Coordinates(0, 2), Marker.O)
         game.place_marker(Coordinates(2, 0), Marker.X)
-        self.assertEquals(game.get_game_outcome(), (Outcome.Win, Marker.X))
+        self.assertEqual(game.get_game_outcome(), (Outcome.Win, Marker.X))
 
     def test_c3_7(self):
         game = Game()
@@ -85,7 +86,7 @@ class Tests(unittest.TestCase):
             [Marker.X, Marker.X, Marker.O],
             [Marker.X, Marker.O, Marker.X],
         ]
-        self.assertEquals(game.get_game_outcome(), (Outcome.Win, Marker.X))
+        self.assertEqual(game.get_game_outcome(), (Outcome.Win, Marker.X))
 
     def test_c3_8(self):
         game = Game()
@@ -94,7 +95,7 @@ class Tests(unittest.TestCase):
             [Marker.X, Marker.X, None],
             [Marker.O, Marker.O, Marker.O],
         ]
-        self.assertEquals(game.get_game_outcome(), (Outcome.Win, Marker.O))
+        self.assertEqual(game.get_game_outcome(), (Outcome.Win, Marker.O))
 
     def test_c3_9(self):
         game = Game()
@@ -103,7 +104,7 @@ class Tests(unittest.TestCase):
             [Marker.X, Marker.O, Marker.O],
             [Marker.X, Marker.O, Marker.X],
         ]
-        self.assertEquals(game.get_game_outcome(), (Outcome.Draw, None))
+        self.assertEqual(game.get_game_outcome(), (Outcome.Draw, None))
 
     def test_c3_10(self):
         game = Game()
@@ -112,7 +113,7 @@ class Tests(unittest.TestCase):
             [Marker.X, None, Marker.O],
             [Marker.X, Marker.X, Marker.O],
         ]
-        self.assertEquals(game.get_game_outcome(), None)
+        self.assertEqual(game.get_game_outcome(), None)
 
     def test_c3_11(self):
         game = Game()
@@ -123,6 +124,9 @@ class Tests(unittest.TestCase):
         ]
         with self.assertRaises(GameAlreadyFinishedError):
             game.place_marker(Coordinates(2, 0), Marker.O)
+
+    def test_c4(self):
+        self.assertEqual(tower_builder(3), ["  *  ", " *** ", "*****"])
 
 
 if __name__ == "__main__":
