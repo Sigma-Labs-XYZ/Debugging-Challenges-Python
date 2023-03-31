@@ -12,7 +12,7 @@ The example above would return:
 
 
 def remove_parentheses(s):
-    lvl, out = 0, []
+    lvl, out = 1, []
     for c in s:
         lvl -= c == "("
         if not lvl:

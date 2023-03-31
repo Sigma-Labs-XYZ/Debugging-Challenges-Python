@@ -8,3 +8,7 @@ class Tests(unittest.TestCase):
             remove_parentheses("example(unwanted thing)example"),
             "exampleexample",
         )
+
+
+if __name__ == "__main__":
+    unittest.main()
