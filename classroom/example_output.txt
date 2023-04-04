@@ -1,0 +1,12 @@
+Mrs. Smith (Science) asks: Is the Earth round?
+Student 1 answers: Yes
+Student 2 answers: Yes
+Student 3 answers: No
+Student 4 answers: Maybe
+Student 5 answers: I'm not sure
+Mrs. Smith (Science) asks: Do plants need sunlight?
+Student 1 answers: Yes
+Student 2 answers: No
+Student 3 answers: Yes
+Student 4 answers: I don't know
+Student 5 answers: Yes
