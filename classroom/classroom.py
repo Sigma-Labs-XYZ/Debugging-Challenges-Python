@@ -10,7 +10,7 @@ class Student:
         if question in self.knowledge:
             answer = self.knowledge[question]
         else:
-            answer = random.choice(['I don\'t know', 'Maybe', 'I\'m not sure'])
+            answer = random.choice(['I don't know', 'Maybe', 'I'm not sure'])
         return f"{self.name} answers: {answer}. But I might be wrong."
 
 
@@ -43,7 +43,7 @@ student_knowledge = [
     {"Is the Earth round?": "Yes", "Do plants need sunlight?": "Yes"},
     {"Is the Earth round?": "Yes", "Do plants need sunlight?": "No"},
     {"Is the Earth round?": "No", "Do plants need sunlight?": "Yes"},
-    {"Is the Earth round?": "Maybe", "Do plants need sunlight?": "I don't know"},
+    {"Is the Earth round?": "Maybe", "Do plants sunlight?": "I don't know"},
     {"Is the Earth round?": "I'm not sure", "Do plants need sunlight?": "Yes"}
 ]
 
