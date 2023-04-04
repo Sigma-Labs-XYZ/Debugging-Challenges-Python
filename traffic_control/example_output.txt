@@ -1,0 +1,95 @@
+📞 Flight 123 requesting permission to land at ABC International Airport
+Flight 123 is descending, current altitude is 9150 feet
+Flight 123 is reducing speed, current speed is 213 knots
+Flight 123 is descending, current altitude is 8382 feet
+Flight 123 is reducing speed, current speed is 201 knots
+📞 Flight 456 requesting permission to land at ABC International Airport
+Flight 456 is descending, current altitude is 11183 feet
+Flight 456 is reducing speed, current speed is 202 knots
+Flight 123 is descending, current altitude is 7743 feet
+Flight 123 is reducing speed, current speed is 175 knots
+Flight 456 is descending, current altitude is 10257 feet
+Flight 456 is reducing speed, current speed is 157 knots
+Flight 123 is descending, current altitude is 6884 feet
+Flight 123 is reducing speed, current speed is 131 knots
+📞 Flight 789 requesting permission to land at ABC International Airport
+Flight 456 is descending, current altitude is 9349 feet
+Flight 456 is reducing speed, current speed is 138 knots
+Flight 123 is descending, current altitude is 6176 feet
+Flight 123 is reducing speed, current speed is 98 knots
+Flight 456 is descending, current altitude is 8353 feet
+Flight 123 is descending, current altitude is 5508 feet
+Flight 456 is reducing speed, current speed is 94 knots
+Flight 123 is reducing speed, current speed is 53 knots
+📞 Flight 321 requesting permission to land at ABC International Airport
+Flight 456 is descending, current altitude is 7810 feet
+Flight 456 is reducing speed, current speed is 76 knots
+Flight 123 is descending, current altitude is 4807 feet
+Flight 123 is reducing speed, current speed is 17 knots
+Flight 456 is descending, current altitude is 7094 feet
+Flight 456 is reducing speed, current speed is 43 knots
+Flight 123 is descending, current altitude is 4039 feet
+Flight 123 is reducing speed, current speed is 0 knots
+📞 Flight 654 requesting permission to land at ABC International Airport
+Flight 456 is descending, current altitude is 6184 feet
+Flight 456 is reducing speed, current speed is 25 knots
+Flight 123 is descending, current altitude is 3074 feet
+Flight 123 is descending, current altitude is 2451 feet
+Flight 456 is descending, current altitude is 5537 feet
+Flight 456 is reducing speed, current speed is 0 knots
+Flight 123 is descending, current altitude is 1456 feet
+Flight 456 is descending, current altitude is 4814 feet
+Flight 456 is descending, current altitude is 3998 feet
+Flight 123 is descending, current altitude is 734 feet
+Flight 123 is descending, current altitude is 68 feet
+Flight 456 is descending, current altitude is 3410 feet
+Flight 123 is descending, current altitude is 0 feet
+Flight 456 is descending, current altitude is 2581 feet
+🛬 Flight 123 has landed at ABC International Airport
+Flight 456 is descending, current altitude is 1804 feet
+📞 Flight 789 requesting permission to land at ABC International Airport
+Flight 789 is descending, current altitude is 14208 feet
+Flight 789 is reducing speed, current speed is 239 knots
+Flight 456 is descending, current altitude is 910 feet
+Flight 789 is descending, current altitude is 13446 feet
+Flight 789 is reducing speed, current speed is 224 knots
+Flight 789 is descending, current altitude is 12828 feet
+Flight 789 is reducing speed, current speed is 214 knots
+Flight 456 is descending, current altitude is 136 feet
+Flight 789 is descending, current altitude is 12225 feet
+Flight 789 is reducing speed, current speed is 183 knots
+Flight 456 is descending, current altitude is 0 feet
+Flight 789 is descending, current altitude is 11674 feet
+🛬 Flight 456 has landed at ABC International Airport
+Flight 789 is reducing speed, current speed is 163 knots
+📞 Flight 321 requesting permission to land at ABC International Airport
+Flight 321 is descending, current altitude is 7486 feet
+Flight 321 is reducing speed, current speed is 189 knots
+Flight 321 is descending, current altitude is 6903 feet
+Flight 321 is reducing speed, current speed is 142 knots
+Flight 789 is descending, current altitude is 10808 feet
+Flight 789 is reducing speed, current speed is 131 knots
+Flight 321 is descending, current altitude is 5996 feet
+Flight 321 is reducing speed, current speed is 115 knots
+Flight 789 is descending, current altitude is 10149 feet
+Flight 789 is reducing speed, current speed is 87 knots
+Flight 321 is descending, current altitude is 5454 feet
+Flight 321 is reducing speed, current speed is 78 knots
+Flight 789 is descending, current altitude is 9189 feet
+Flight 789 is reducing speed, current speed is 59 knots
+Flight 321 is descending, current altitude is 4465 feet
+Flight 321 is reducing speed, current speed is 54 knots
+Flight 789 is descending, current altitude is 8292 feet
+Flight 789 is reducing speed, current speed is 19 knots
+Flight 321 is descending, current altitude is 3634 feet
+Flight 321 is reducing speed, current speed is 26 knots
+Flight 789 is descending, current altitude is 7776 feet
+Flight 789 is reducing speed, current speed is 6 knots
+Flight 789 is descending, current altitude is 7205 feet
+Flight 789 is reducing speed, current speed is 0 knots
+Flight 321 is descending, current altitude is 2868 feet
+Flight 321 is reducing speed, current speed is 0 knots
+Flight 321 is descending, current altitude is 2302 feet
+Flight 789 is descending, current altitude is 6309 feet
+Flight 789 is descending, current altitude is 5783 feet
+Flight 321 is descending, current altitude is 1438 feet
