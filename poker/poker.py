@@ -19,7 +19,7 @@ class Deck:
         random.shuffle(self.cards)
 
     def deal(self, num_of_cards):
-        return [self.cards.pop() for _ in range(num_of_cards)]
+        [self.cards.pop() for _ in range(num_of_cards)]
 
 
 class PokerHand:
