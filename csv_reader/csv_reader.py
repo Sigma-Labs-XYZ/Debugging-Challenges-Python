@@ -1,17 +1,20 @@
-# You need to create a function that parses a .txt file that is csv-formatted
+# You need to create a function that parses a .txt file (represented as a list of strings) that is csv-formatted
 # into a dataframe-like python object
 
 # Your function should return columns with correct types. If the type of the column
-# can not be inferred as the same throughout, e.g. int, the column should default to str.
+# can not be inferred as the same throughout, e.g. int or float, the column should default to str.
 
 # Lists should only be typed if the types they contain are homogenous.
 # e.g. 30|fifty should default to List[str], 30|20 can be List[int]
 
-# Check every piece of data in a column/array to make sure the types are homogenous
+# Check every piece of data in a column and/or the containing arrays to make sure the types are homogenous
 
 # Don't worry about edge cases: just get tests passing
 
 # Copy parse_csv into ChatGPT to get an overview of the helper functions.
+
+# It is too complicated to tackle parse_csv as a whole. Instead, make sure you
+# understand what each helper function is doing and get them working in isolation
 
 from types import NoneType
 from typing import (
