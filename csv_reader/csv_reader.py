@@ -16,6 +16,9 @@
 # It is too complicated to tackle parse_csv as a whole. Instead, make sure you
 # understand what each helper function is doing and get them working in isolation
 
+# Hint: only three lines of code have been changed
+
+
 from types import NoneType
 from typing import (
     NewType,
