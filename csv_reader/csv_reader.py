@@ -53,7 +53,7 @@ def parse_csv(text: List[str]) -> DataFrame:
     def represent_type(t: Type[float | int], s: str) -> bool:
         try:
             t(s)
-        except ValueError:
+        except KeyError:
             return False
         return True
 
