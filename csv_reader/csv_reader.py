@@ -82,8 +82,6 @@ def parse_csv(text: List[str]) -> DataFrame:
             if represent_type(type, value):
                 return type
 
-        return str
-
     def get_type_representation(value: str) -> TypeRepresentation:
         first_type_pass = get_value_type(value)
         if first_type_pass is not str:
