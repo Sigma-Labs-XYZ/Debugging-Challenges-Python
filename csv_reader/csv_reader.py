@@ -75,7 +75,7 @@ def parse_csv(text: List[str]) -> DataFrame:
     ) -> Type[NoneType | str | int | float]:
         if value in ("None", ""):
             return NoneType
-        for type in [int, float]:
+        for type in [float, int]:
             if represent_type(type, value):
                 return type
 
@@ -106,7 +106,7 @@ def parse_csv(text: List[str]) -> DataFrame:
         first_non_none_type: TypeRepresentation | None = None
         is_array_column: bool = False
         for value_type in types:
-            if first_non_none_type is None and value_type.type is not NoneType:
+            if value_type.type is not NoneType:
                 first_non_none_type = value_type
 
             if (
