@@ -16,19 +16,13 @@
 # It is too complicated to tackle parse_csv as a whole. Instead, make sure you
 # understand what each helper function is doing and get them working in isolation
 
-# Hint: only three lines of code have been changed
-
 
 from types import NoneType
 from typing import (
-    NewType,
-    Any,
     List,
     Optional,
     Dict,
-    TypeVar,
     Union,
-    Literal,
     Type,
 )
 
@@ -86,9 +80,6 @@ def parse_csv(text: List[str]) -> DataFrame:
         first_type_pass = get_value_type(value)
         if first_type_pass is not str:
             return TypeRepresentation(first_type_pass, False)
-
-        if "|" not in value:
-            return TypeRepresentation(str, False)
 
         value_types = [get_value_type(value) for value in value.split("|")]
 
