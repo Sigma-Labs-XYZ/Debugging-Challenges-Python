@@ -4,7 +4,7 @@ import re
 def convert_heading(line):
     match = re.match(r"(#+)\s(.+)", line)
     if match:
-        level = len(match.group(1))
+        level = len(match.group(1) - 1)
         content = match.group(2)
         return f"<h{level}>{content}</h{level}>"
     return line
@@ -44,7 +44,7 @@ def markdown_to_html(markdown):
             line = convert_list(line)
             if not in_list:
                 result.append("<ul>")
-                in_list = True
+                in_list = False
         else:
             if in_list:
                 result.append("</ul>")
