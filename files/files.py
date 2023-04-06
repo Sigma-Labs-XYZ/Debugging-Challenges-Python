@@ -2,10 +2,10 @@ import re
 
 
 class FileSystemNode:
-    def __init__(self, name: str, is_directory: bool, children=None):
+    def __init__(self, name: str, is_directory: bool, children=[]):
         self.name = name
         self.is_directory = is_directory
-        self.children = children if children is not None else []
+        self.children = children
 
     def add_child(self, node):
         if not self.is_directory:
@@ -70,14 +70,14 @@ def _rename_node(node, rename_func, rename_directories=True):
 
 def add_prefix(tree, prefix, rename_directories=True):
     def add_prefix_to_name(name):
-        return prefix + name
+        prefix += name
 
     _rename_node(tree.root, add_prefix_to_name, rename_directories)
 
 
 def add_suffix(tree, suffix, rename_directories=True):
     def add_suffix_to_name(name):
-        return name + suffix
+        name += suffix
 
     _rename_node(tree.root, add_suffix_to_name, rename_directories)
 
