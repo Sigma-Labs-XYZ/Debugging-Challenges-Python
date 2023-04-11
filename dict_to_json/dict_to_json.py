@@ -20,7 +20,7 @@ def get_return_message(
     return {
         "status_code": status_code,
         "status_message": status_message,
-        "content": None,
+        "content": content,
     }
 
 
