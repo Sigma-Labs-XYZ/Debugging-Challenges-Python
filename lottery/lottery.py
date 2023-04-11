@@ -1,3 +1,6 @@
+# This is a program to simulate the lottery in generating numbers and finding matches.
+# Do not edit this code, the aim is to debug!
+
 from typing import List
 import random
 
@@ -13,7 +16,7 @@ def generate_lottery_numbers(num_numbers: int, max_number: int) -> List[int]:
     - List[int]: A list of unique lottery numbers.
     """
     # Generate a list of all possible lottery numbers
-    all_numbers = list(range(max_number + 1,1)) # BUG: arguments in the wrong order
+    all_numbers = list(range(max_number + 1,1))
 
     # Randomly select num_numbers unique lottery numbers from the list of all possible numbers
     lottery_numbers = random.sample(all_numbers, num_numbers)
@@ -21,7 +24,7 @@ def generate_lottery_numbers(num_numbers: int, max_number: int) -> List[int]:
     return lottery_numbers
 
 
-def chec_ticket(ticket_numbers: List[int], lottery_numbers: List[int]) -> int: # BUG: misspelt function name
+def chec_ticket(ticket_numbers: List[int], lottery_numbers: List[int]) -> int:
     """
     Check a lottery ticket against the winning numbers.
 

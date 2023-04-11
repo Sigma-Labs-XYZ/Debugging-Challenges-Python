@@ -12,7 +12,7 @@ class SchoolExamSystem:
     A class representing a school exam system.
     """
 
-    def __init__(self, num_students: int = 20, num_tests: int, file_path: str): # BUG: Default value not specified at the end of the string.
+    def __init__(self, num_students: int = 20, num_tests: int, file_path: str):
         """
         Initialize the school exam system.
 
@@ -36,10 +36,10 @@ class SchoolExamSystem:
         fake = Faker()
 
         students = []
-        for i in range(self.num_students,0): # BUG: will not generate any data since range has 0 as its max
+        for i in range(self.num_students,0):
             first_name = fake.first_name()
             last_name = fake.last_name()
-            student_id = "ST-{i+1}" # BUG: Needs to be an f string
+            student_id = "ST-{i+1}"
             test_scores = [fake.random_int(min=0, max=100) for _ in range(self.num_tests)]
             teacher_name = "{fake.prefix()} {fake.last_name()}"
 
@@ -62,7 +62,7 @@ class SchoolExamSystem:
             for student_data in data:
                 writer.writerow(student_data)
 
-    def run(): # BUG: run is not a static method, thus we need to have self in the argument.
+    def run(): 
         """
         Generate student data and write it to a CSV file.
         """
@@ -82,5 +82,5 @@ class SchoolExamSystem:
 
 if __name__ == "__main__":
     # Example use case
-    exams = SchoolExamSystem(5,15,"./student_data_debug.csv")
+    exams = SchoolExamSystem(5,15,"./student_data_debugged.csv")
     exams.run()

@@ -7,7 +7,7 @@ import time
 class AlarmClock:
     """A simple alarm clock class."""
 
-    def __init__(self, alarm_time: str) -> None: # BUG: remove indendation
+    def __init__(self, alarm_time: str) -> None:
     """
     Initialize a new alarm clock instance.
 
@@ -47,7 +47,7 @@ class AlarmClock:
         current_time = datetime.combine(datetime.today(), current_time)
         if current_time >= self.alarm_time:
             self.alarm_time += timedelta(days=1) 
-        return alarm_time - current_time # BUG: remove self.alarm time
+        return alarm_time - current_time
 
 
 if __name__ == "__main__":
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     alarm_clock = AlarmClock(timestamp_to_set.strftime("%H:%M:%S %d/%m/%Y"))
 
     # Wait until the alarm time is reached
-    while alarm_clock.check_alarm(): # BUG: remove negation so loop is infinite
+    while alarm_clock.check_alarm():
         time_until_alarm = alarm_clock.time_until_alarm()
         print(f"Alarm goes off in {time_until_alarm.seconds} seconds")
         time.sleep(1)

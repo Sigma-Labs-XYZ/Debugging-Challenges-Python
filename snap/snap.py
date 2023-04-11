@@ -2,7 +2,6 @@
 # The game is not working if the same person wins every time the game is played.
 # Do not edit this code, the aim is to debug! 
 
-# from typing import List, Tuple BUG: need type hints for code to run
 import random
 
 class Snap:
@@ -27,11 +26,11 @@ class Snap:
             players (List[str]): A list of player names.
         """
         self.deck = deck
-        # random.shuffle(self.deck) BUG: need to shuffle deck for game to function
+        # random.shuffle(self.deck) 
         self.players = players
         self.hands = {player: [] for player in players}
     
-    def deal() -> None: # BUG: "self" not in arg
+    def deal() -> None: 
         """
         Deals the cards to the players.
         """
@@ -42,7 +41,7 @@ class Snap:
             end = start + num_cards
             self.hands[player] = self.deck[start:end]
     
-    def play_round(self) -> str: # BUG: code not indented
+    def play_round(self) -> str: 
     """
     Plays a single round of Snap.
     
