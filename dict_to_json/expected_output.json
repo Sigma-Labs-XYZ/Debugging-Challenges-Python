@@ -1,0 +1,13 @@
+{
+  "status": "test",
+  "severity": 500,
+  "messages": {
+    "description": "this is a test",
+    "assets": [
+      1,
+      4,
+      2,
+      5
+    ]
+  }
+}
