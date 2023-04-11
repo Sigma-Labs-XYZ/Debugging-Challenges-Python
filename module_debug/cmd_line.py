@@ -17,6 +17,6 @@ if __name__ == "__main__":
         This will create the files.
     """
     args = parser.parse_args()
-    date_str = args.date
-    date_obj = datetime.strptime(date_str,"%m/%Y")
+    datetime = args.date
+    date_obj = datetime.strptime(datetime,"%m/%Y")
     create_monthly_files(date_obj.month,date_obj.year,args.directory)
