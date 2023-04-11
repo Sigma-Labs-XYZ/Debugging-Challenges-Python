@@ -51,7 +51,7 @@ class AlarmClock:
 
 
 if __name__ == "__main__":
-    # Create a new alarm clock instance with an initial alarm time of 7:30 AM
+    # Create a new alarm clock instance with an initial alarm time of 5 seconds from now
     timestamp_to_set = datetime.now() + timedelta(seconds=5)
     alarm_clock = AlarmClock(timestamp_to_set.strftime("%H:%M:%S %d/%m/%Y"))
 
