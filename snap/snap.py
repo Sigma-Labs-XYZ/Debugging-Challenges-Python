@@ -31,7 +31,7 @@ class Snap:
         self.players = players
         self.hands = {player: [] for player in players}
     
-    def deal(self) -> None:
+    def deal() -> None: # BUG: "self" not in arg
         """
         Deals the cards to the players.
         """
@@ -42,19 +42,19 @@ class Snap:
             end = start + num_cards
             self.hands[player] = self.deck[start:end]
     
-    def play_round(self) -> str:
-        """
-        Plays a single round of Snap.
-        
-        Returns:
-            str: The name of the player who won the round, or None if there was no winner.
-        """
-        cards_played = [self.hands[player].pop(0) for player in self.players]
-        ranks_played = [card[0] for card in cards_played]
-        if len(set(ranks_played)) == 1:
-            return None
-        else:
-            return self.players[ranks_played.index(max(ranks_played))]
+    def play_round(self) -> str: # BUG: code not indented
+    """
+    Plays a single round of Snap.
+    
+    Returns:
+        str: The name of the player who won the round, or None if there was no winner.
+    """
+    cards_played = [self.hands[player].pop(0) for player in self.players]
+    ranks_played = [card[0] for card in cards_played]
+    if len(set(ranks_played)) == 1:
+        return None
+    else:
+        return self.players[ranks_played.index(max(ranks_played))]
 
 if __name__ == "__main__":
     # Create the deck using loops
